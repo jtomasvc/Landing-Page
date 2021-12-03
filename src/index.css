@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.modal-style {
+    position: fixed;
+    top:10%;
+    left:50%;
+    transform: translate(-50%, 50%);
+    background-color: #FFF;
+    padding: 3.125rem;
+    z-index: 1000;
+}
+
+
+@media (max-width: 576px) {
+    .modal-style {
+        top: 0%;
+        width:90%
+    }
+ }
+
+.overLay {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.7);
+}
