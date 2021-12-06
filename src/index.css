@@ -2,15 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    box-sizing: border-box;
+    overflow-x: hidden!important;
+}
+
+body {
+    overflow-x: hidden!important;
+}
 
 .modal-style {
-    position: fixed;
+    position: absolute;
     top:10%;
     left:50%;
     transform: translate(-50%, 50%);
     background-color: #FFF;
     padding: 3.125rem;
     z-index: 1000;
+}
+
+.backgroundNavigation {
+    background-color: #99d0fc;
 }
 
 
@@ -28,4 +40,205 @@
     right:0;
     bottom:0;
     background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.floorOne {
+    background-image: url('./img/backgroundMain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center ;
+}
+
+.widthImage {
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (min-width:576px) {
+    .widthImage {
+        width: 20%;
+        margin: 0 auto;
+    }
+}
+
+.shine {
+    width: 60%;
+}
+
+@media (min-width:576px) {
+    .shine {
+        width: 30%;
+        right: -48rem;
+        top: 4rem;
+    }
+    
+}
+
+.house {
+    position: absolute;
+    bottom: 26px;
+    left: -14.5rem;
+    height: 55%;
+}
+
+@media (min-width:576px) {
+    .house {
+        position: absolute;
+        bottom: 12px;
+        height: 95%;
+        z-index: 10;
+    }
+    
+}
+
+.family {
+    position: absolute;
+    bottom: 0px;
+    left: 0rem;
+    width: 50%;
+}
+
+@media (min-width:576px) {
+    .family {
+        position: absolute;
+        bottom: 0px;
+        left: 16rem;
+        width: 20%;
+        z-index: 20;
+    }
+    
+}
+
+.child {
+    position: absolute;
+    bottom: 0px;
+    left: 10rem;
+    width: 30%;
+}
+
+@media (min-width:576px) {
+    .child {
+        position: absolute;
+        bottom: 14px;
+        left: 34rem;
+        width: 12%;
+        z-index: 20;
+    }     
+}
+
+.car {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    right: 0;
+}
+
+.mountain {
+    display: none;
+}  
+
+@media (min-width:576px) {
+    .mountain {
+        position: absolute;
+        bottom: 39px;
+        left: 10rem;
+        display: block;
+        z-index: 1;
+    }     
+}
+
+@media (min-width:576px) {
+    .cloud {
+        position: absolute;
+        left: 42rem;
+        top: 8rem;
+    }     
+}
+
+@media (min-width:576px) {
+    .cloudOne {
+        position: absolute;
+        left: 62rem;
+        top: 2rem;
+    }     
+}
+
+.textura {
+    background-image: url('./img/textura.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background {
+    background-color: #706f6f;
+    padding-bottom: 5.5rem;
+    padding-top: 1rem;
+}
+
+.caja {
+    background-color:#FFF ;
+    border-radius: 1rem;
+    padding: .5rem;
+    width: 50%;
+    margin: -2rem 1rem 1rem 6rem;
+}
+
+.number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 10rem;
+    z-index: 1;
+    color: rgb(20 175 210 / 30%);
+    font-weight: bold;
+}
+
+@media (min-width:576px) {
+    .caja {
+        position: relative;
+        background-color:#FFF ;
+        border-radius: 1rem;
+        width: 16%;
+        margin: -2rem 1rem 0 1rem;
+        height: 20rem;
+    }   
+
+    .number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 10rem;
+        z-index: 1;
+        color: rgb(20 175 210 / 30%);
+        font-weight: bold;
+    }
+
+    .altura {
+        height: 80vh;
+    }
+}
+
+.colombianitos {
+    background-color: #f9cf05;
+}
+
+.building {
+    background-image: url('./img/Building.png');
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form {
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 2rem;
 }

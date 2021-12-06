@@ -1,9 +1,9 @@
 import React from 'react'
-
+import  { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className="px-4">
-            <h1>Este es un Footer</h1>
+            <Link to="/terminosycondiciones" className="nav-item p-2 cursor-pointer font-medium text-xl">Terminos y condiciones</Link>
         </div>
     )
 }

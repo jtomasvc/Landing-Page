@@ -36,7 +36,6 @@ const SectionThree = ({id}) => {
 
     return (
         <div id={id} className="px-4">
-            <h1 className="text-center mt-4 mb-4">Participa</h1>
             <Formik
                 initialValues={{
                     nombre:'',
@@ -61,120 +60,125 @@ const SectionThree = ({id}) => {
                 {({errors, touched}) => {
                     
                     return (
-                <Form>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="nombre"
-                        >Nombre y apellido:</label>
+                <Form className="form">
+                    <div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="nombre"
+                            >Nombre y apellido:</label>
 
-                        <Field
-                            id="nombre"
-                            type="text"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Tu nombre y apellido"
-                            name="nombre"
-                        />
+                            <Field
+                                id="nombre"
+                                type="text"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Tu nombre y apellido"
+                                name="nombre"
+                            />
 
-                        {errors.nombre && touched.nombre ? (
-                            <Error>{errors.nombre}</Error>
-                        ): null}
+                            {errors.nombre && touched.nombre ? (
+                                <Error>{errors.nombre}</Error>
+                            ): null}
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="cedula"
+                            >Cedula:</label>
+
+                            <Field
+                                id="cedula"
+                                type="number"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Tu Cedula"
+                                name="cedula"
+                            />
+
+                            {errors.cedula && touched.cedula ? (
+                                <Error>{errors.cedula}</Error>
+                            ): null}
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="correo"
+                            >Correo Electronico:</label>
+
+                            <Field
+                                id="correo"
+                                type="email"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Tu Correo"
+                                name="correo"
+                            />
+
+                            {errors.correo && touched.correo ? (
+                                <Error>{errors.correo}</Error>
+                            ): null}
+                        </div>
                     </div>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="cedula"
-                        >Cedula:</label>
+                   
+                    <div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="Telefono"
+                            >Telefono:</label>
 
-                        <Field
-                            id="cedula"
-                            type="number"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Tu Cedula"
-                            name="cedula"
-                        />
+                            <Field
+                                id="Telefono"
+                                type="tel"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Tu Telefono"
+                                name="telefono"
+                            />
 
-                        {errors.cedula && touched.cedula ? (
-                            <Error>{errors.cedula}</Error>
-                        ): null}
+                            {errors.telefono && touched.telefono ? (
+                                <Error>{errors.telefono}</Error>
+                            ): null}
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="instagram"
+                            >Usuario Instagram:</label>
+
+                            <Field
+                                id="instagram"
+                                type="text"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Tu Usuario de Instagram"
+                                name="usuario"
+                            />
+
+                            {errors.usuario && touched.usuario ? (
+                                <Error>{errors.usuario}</Error>
+                            ): null}
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="Factura"
+                            >Numero de factura:</label>
+
+                            <Field
+                                id="Factura"
+                                type="number"
+                                className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
+                                placeholder="Numero de factura"
+                                name="factura"
+                            />
+
+                            {errors.factura && touched.factura ? (
+                                <Error>{errors.factura}</Error>
+                            ): null}
+                        </div> 
                     </div>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="correo"
-                        >Correo Electronico:</label>
-
-                        <Field
-                            id="correo"
-                            type="email"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Tu Correo"
-                            name="correo"
-                        />
-
-                        {errors.correo && touched.correo ? (
-                            <Error>{errors.correo}</Error>
-                        ): null}
-                    </div>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="Telefono"
-                        >Telefono:</label>
-
-                        <Field
-                            id="Telefono"
-                            type="tel"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Tu Telefono"
-                            name="telefono"
-                        />
-
-                        {errors.telefono && touched.telefono ? (
-                            <Error>{errors.telefono}</Error>
-                        ): null}
-                    </div>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="instagram"
-                        >Usuario Instagram:</label>
-
-                        <Field
-                            id="instagram"
-                            type="text"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Tu Usuario de Instagram"
-                            name="usuario"
-                        />
-
-                        {errors.usuario && touched.usuario ? (
-                            <Error>{errors.usuario}</Error>
-                        ): null}
-                    </div>
-                    <div className="mb-4">
-                        <label
-                            className="text-gray-800"
-                            htmlFor="Factura"
-                        >Numero de factura:</label>
-
-                        <Field
-                            id="Factura"
-                            type="number"
-                            className="mt-2 block w-full bg-gray-50 p-2 rounded-lg"
-                            placeholder="Numero de factura"
-                            name="factura"
-                        />
-
-                        {errors.factura && touched.factura ? (
-                            <Error>{errors.factura}</Error>
-                        ): null}
-                    </div> 
-
+                   
                     <input
                         type="submit"
                         value="Participar"
-                        className="mt-5 w-full bg-blue-800 p-3 text-white uppercase font-bold text-lg rounded-lg"
+                        className="mt-5 w-full bg-blue-800 p-3 text-white uppercase font-bold text-lg rounded-lg cursor-pointer"
                     />
 
                     {mensaje && <p className="text-center my-4 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold p-3 uppercase rounded-lg">¡Ya estas participando!!</p>}
